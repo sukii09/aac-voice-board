@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AAC Voice Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>AAC Voice Board</h1>
+
+  <h2>Basic Phrases</h2>
+  <div class="grid">
+    <button onclick="speak('I want')">
+      <img src="icons/want.png" alt="I want" />
+      <span>I want</span>
+    </button>
+    <button onclick="speak('Help')">
+      <img src="icons/help.png" alt="Help" />
+      <span>Help</span>
+    </button>
+    <button onclick="speak('Yes')">
+      <img src="icons/yes.png" alt="Yes" />
+      <span>Yes</span>
+    </button>
+    <button onclick="speak('No')">
+      <img src="icons/no.png" alt="No" />
+      <span>No</span>
+    </button>
+  </div>
+
+  <h2>Categories</h2>
+  <div class="grid">
+    <a href="food.html">
+      <button>
+        <img src="icons/food.png" alt="Food" />
+        <span>Food</span>
+      </button>
+    </a>
+    <a href="colors.html">
+      <button>
+        <img src="icons/colors.png" alt="Colors" />
+        <span>Colors</span>
+      </button>
+    </a>
+    <a href="shapes.html">
+      <button>
+        <img src="icons/shapes.png" alt="Shapes" />
+        <span>Shapes</span>
+      </button>
+    </a>
+    <a href="numbers.html">
+      <button>
+        <img src="icons/numbers.png" alt="Numbers" />
+        <span>Numbers</span>
+      </button>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
