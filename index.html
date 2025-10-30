@@ -7,56 +7,66 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- nav Bar -->
+  <div class="navbar">
+    <a href="index.html" class="home-button">🏠 Home</a>
+  </div>
+
   <h1>AAC Voice Board</h1>
 
-  <h2>Basic Phrases</h2>
+  <!-- core words -->
+  <h2>Core Words</h2>
   <div class="grid">
-    <button onclick="speak('I want')">
-      <img src="icons/want.png" alt="I want" />
-      <span>I want</span>
-    </button>
-    <button onclick="speak('Help')">
-      <img src="icons/help.png" alt="Help" />
-      <span>Help</span>
-    </button>
-    <button onclick="speak('Yes')">
-      <img src="icons/yes.png" alt="Yes" />
-      <span>Yes</span>
-    </button>
-    <button onclick="speak('No')">
-      <img src="icons/no.png" alt="No" />
-      <span>No</span>
-    </button>
+    <!-- Row 1 -->
+    <button onclick="speak('I')" class="orange"><span>I</span></button>
+    <button onclick="speak('you')" class="orange"><span>you</span></button>
+    <button onclick="speak('we')" class="orange"><span>we</span></button>
+    <button onclick="speak('want')" class="pink"><span>want</span></button>
+    <button onclick="speak('like')" class="pink"><span>like</span></button>
+    <button onclick="speak('help')" class="pink"><span>help</span></button>
+
+    <!-- Row 2 -->
+    <button onclick="speak('stop')" class="pink"><span>stop</span></button>
+    <button onclick="speak('go')" class="pink"><span>go</span></button>
+    <button onclick="speak('come')" class="pink"><span>come</span></button>
+    <button onclick="speak('eat')" class="yellow"><span>eat</span></button>
+    <button onclick="speak('drink')" class="yellow"><span>drink</span></button>
+    <button onclick="speak('play')" class="yellow"><span>play</span></button>
+
+    <!-- Row 3 -->
+    <button onclick="speak('yes')" class="blue"><span>yes</span></button>
+    <button onclick="speak('no')" class="blue"><span>no</span></button>
+    <button onclick="speak('more')" class="blue"><span>more</span></button>
+    <button onclick="speak('finished')" class="blue"><span>finished</span></button>
+    <button onclick="speak('look')" class="pink"><span>look</span></button>
+    <button onclick="speak('put')" class="pink"><span>put</span></button>
+
+    <!-- Row 4 -->
+    <button onclick="speak('open')" class="pink"><span>open</span></button>
+    <button onclick="speak('close')" class="pink"><span>close</span></button>
+    <button onclick="speak('in')" class="green"><span>in</span></button>
+    <button onclick="speak('out')" class="green"><span>out</span></button>
+    <button onclick="speak('up')" class="green"><span>up</span></button>
+    <button onclick="speak('down')" class="green"><span>down</span></button>
   </div>
 
+  <!-- other html pages  -->
   <h2>Categories</h2>
   <div class="grid">
-    <a href="food.html">
-      <button>
-        <img src="icons/food.png" alt="Food" />
-        <span>Food</span>
-      </button>
-    </a>
-    <a href="colors.html">
-      <button>
-        <img src="icons/colors.png" alt="Colors" />
-        <span>Colors</span>
-      </button>
-    </a>
-    <a href="shapes.html">
-      <button>
-        <img src="icons/shapes.png" alt="Shapes" />
-        <span>Shapes</span>
-      </button>
-    </a>
-    <a href="numbers.html">
-      <button>
-        <img src="icons/numbers.png" alt="Numbers" />
-        <span>Numbers</span>
-      </button>
-    </a>
+    <a href="people.html"><button class="black"><span>People</span></button></a>
+    <a href="food.html"><button class="black"><span>Food</span></button></a>
+    <a href="colors.html"><button class="black"><span>Colors</span></button></a>
+    <a href="places.html"><button class="black"><span>Places</span></button></a>
+    <a href="actions.html"><button class="black"><span>Actions</span></button></a>
+    <a href="numbers.html"><button class="black"><span>Numbers</span></button></a>
   </div>
 
-  <script src="script.js"></script>
+  <!-- voice api  -->
+  <script>
+    function speak(text) {
+      const msg = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
 </body>
 </html>
